@@ -65,7 +65,7 @@ export function RouterSwitcherCapsule() {
 }
 
 const styles = StyleSheet.create({
-  capsule: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 12, paddingVertical: 7 },
+  capsule: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 12, paddingVertical: 7 },
   // The system glass adds ~4pt around the item: together the same 12pt inset as the Android pill.
   bare: { paddingHorizontal: 8 },
 });

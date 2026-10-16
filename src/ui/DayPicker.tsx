@@ -89,5 +89,5 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
   },
   onText: { color: '#FFFFFF' },
-  presets: { flexDirection: 'row', gap: spacing.l, paddingHorizontal: 2 },
+  presets: { flexDirection: 'row', paddingHorizontal: 2 },
 });

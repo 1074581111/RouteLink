@@ -115,8 +115,8 @@ function InstallInvite() {
 }
 
 const styles = StyleSheet.create({
-  totals: { flexDirection: 'row', gap: spacing.xl },
+  totals: { flexDirection: 'row'},
   top: { gap: 6 },
-  topRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  topRow: { flexDirection: 'row', alignItems: 'center'},
   topName: { flex: 1 },
 });

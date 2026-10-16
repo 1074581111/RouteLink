@@ -129,6 +129,6 @@ const styles = StyleSheet.create({
   scroll: { paddingBottom: spacing.s },
   shrink: { flexShrink: 1 },
   details: { gap: spacing.m },
-  titleRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  titleRow: { flexDirection: 'row', alignItems: 'center'},
   fact: { gap: 2 },
 });

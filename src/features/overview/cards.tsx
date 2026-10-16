@@ -242,10 +242,10 @@ export function DevicesCard({ clients }: { clients?: Client[] }) {
 const styles = StyleSheet.create({
   skeleton: { gap: spacing.s },
   rings: { flexDirection: 'row', justifyContent: 'space-around' },
-  status: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  legend: { flexDirection: 'row', gap: spacing.xl },
+  status: { flexDirection: 'row', alignItems: 'center'},
+  legend: { flexDirection: 'row'},
   legendItem: { gap: 2 },
-  legendLabel: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  devices: { flexDirection: 'row', alignItems: 'center', gap: spacing.xl },
+  legendLabel: { flexDirection: 'row', alignItems: 'center'},
+  devices: { flexDirection: 'row', alignItems: 'center'},
   devicesDetail: { gap: 2 },
 });

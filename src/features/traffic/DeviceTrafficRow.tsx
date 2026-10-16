@@ -108,15 +108,14 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.m,
     paddingHorizontal: spacing.l,
     paddingVertical: spacing.m,
   },
   icon: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
   body: { flex: 1, gap: 3 },
-  line: { flexDirection: 'row', alignItems: 'baseline', gap: spacing.s },
+  line: { flexDirection: 'row', alignItems: 'baseline'},
   name: { flex: 1 },
   track: { height: 4, borderRadius: 2, overflow: 'hidden', marginTop: 2 },
   bar: { height: 4, borderRadius: 2 },
-  rates: { flexDirection: 'row', gap: spacing.m },
+  rates: { flexDirection: 'row'},
 });

@@ -221,7 +221,7 @@ export function SignalChart({
 
 const styles = StyleSheet.create({
   readout: { minHeight: 18, marginBottom: 4, justifyContent: 'center' },
-  legend: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  legend: { flexDirection: 'row', alignItems: 'center'},
   legendText: { flexShrink: 1 },
   swatch: { width: 10, height: 3, borderRadius: 1.5 },
   gradeLabel: { position: 'absolute', left: 2 },

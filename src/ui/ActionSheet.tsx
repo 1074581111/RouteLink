@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: spacing.s,
     paddingHorizontal: spacing.l,
   },
   disabled: { opacity: 0.4 },
