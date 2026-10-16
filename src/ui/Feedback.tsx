@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
   banner: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.s,
     paddingHorizontal: spacing.l,
     paddingVertical: spacing.m,
   },

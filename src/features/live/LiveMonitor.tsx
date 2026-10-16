@@ -326,5 +326,5 @@ function useNow(active: boolean): number {
 const styles = StyleSheet.create({
   wrap: { gap: spacing.s },
   notice: { padding: spacing.l, gap: spacing.m },
-  noticeActions: { flexDirection: 'row', gap: spacing.s, justifyContent: 'flex-end' },
+  noticeActions: { flexDirection: 'row', justifyContent: 'flex-end' },
 });

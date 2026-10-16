@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
   option: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.m,
     paddingHorizontal: spacing.m,
     paddingVertical: spacing.m,
     borderRadius: 14,

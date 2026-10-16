@@ -88,5 +88,5 @@ export default function WirelessScan() {
 
 const styles = StyleSheet.create({
   actions: { gap: spacing.s },
-  signal: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  signal: { flexDirection: 'row', alignItems: 'center'},
 });

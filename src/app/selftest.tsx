@@ -105,6 +105,6 @@ function SelfTestRunner() {
 
 const styles = StyleSheet.create({
   content: { padding: spacing.l, gap: spacing.m },
-  row: { flexDirection: 'row', gap: spacing.m, alignItems: 'flex-start' },
+  row: { flexDirection: 'row', alignItems: 'flex-start' },
   flex: { flex: 1 },
 });

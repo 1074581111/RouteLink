@@ -87,6 +87,6 @@ const styles = StyleSheet.create({
   scrim: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(0,0,0,0.35)' },
   wrap: { position: 'absolute', left: spacing.m, right: spacing.m, bottom: 0 },
   sheet: { padding: spacing.xl, gap: spacing.m },
-  titleRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  titleRow: { flexDirection: 'row', alignItems: 'center'},
   flex: { flex: 1 },
 });

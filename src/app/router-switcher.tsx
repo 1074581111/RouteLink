@@ -140,7 +140,7 @@ function RowRight({ router, current }: { router: RouterProfile; current: boolean
 }
 
 const styles = StyleSheet.create({
-  right: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  right: { flexDirection: 'row', alignItems: 'center'},
   nested: { marginLeft: spacing.l },
   actions: { gap: spacing.s },
 });

@@ -147,10 +147,10 @@ function failureArgs(detail?: string): { detail: string; need: string; free: str
 
 const styles = StyleSheet.create({
   result: { gap: spacing.m },
-  step: { flexDirection: 'row', alignItems: 'center', gap: spacing.m, minHeight: 40 },
+  step: { flexDirection: 'row', alignItems: 'center', minHeight: 40 },
   marker: { width: 24, alignItems: 'center' },
   dot: { width: 8, height: 8, borderRadius: 4 },
   stepText: { flex: 1, gap: 2 },
-  buttons: { flexDirection: 'row', gap: spacing.m },
+  buttons: { flexDirection: 'row'},
   button: { flex: 1 },
 });

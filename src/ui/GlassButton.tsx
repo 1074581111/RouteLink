@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: spacing.s,
   },
   compact: { minHeight: 38, paddingHorizontal: spacing.l },
 });

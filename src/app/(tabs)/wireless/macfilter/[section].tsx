@@ -206,5 +206,5 @@ function Editor({ filter }: { filter: MacFilter }) {
 const styles = StyleSheet.create({
   loading: { gap: spacing.s },
   note: { paddingHorizontal: spacing.l },
-  buttons: { flexDirection: 'row', gap: spacing.s, flexWrap: 'wrap' },
+  buttons: { flexDirection: 'row', flexWrap: 'wrap' },
 });

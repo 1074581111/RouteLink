@@ -293,9 +293,9 @@ function History({ mac, routers }: { mac: string; routers: WifiPluginRouter[] })
 
 const styles = StyleSheet.create({
   card: { gap: spacing.m },
-  headline: { flexDirection: 'row', alignItems: 'center', gap: spacing.s, flexWrap: 'wrap' },
+  headline: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap' },
   tips: { gap: spacing.s },
-  tip: { flexDirection: 'row', alignItems: 'flex-start', gap: spacing.s },
+  tip: { flexDirection: 'row', alignItems: 'flex-start'},
   tipText: { flex: 1 },
   sectionTitle: { marginLeft: spacing.l, marginTop: spacing.s },
 });

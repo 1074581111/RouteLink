@@ -226,7 +226,7 @@ export default function AssistantSettings() {
 }
 
 const styles = StyleSheet.create({
-  buttons: { flexDirection: 'row', gap: spacing.s },
+  buttons: { flexDirection: 'row'},
   flex: { flex: 1 },
   note: { paddingHorizontal: spacing.l },
 });

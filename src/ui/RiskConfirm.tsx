@@ -170,9 +170,9 @@ const styles = StyleSheet.create({
   scrim: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(0,0,0,0.35)' },
   sheetWrap: { position: 'absolute', left: spacing.m, right: spacing.m, bottom: 0 },
   sheet: { padding: spacing.xl, gap: spacing.m },
-  titleRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
-  optionRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.m },
-  bullet: { flexDirection: 'row', alignItems: 'flex-start', gap: spacing.s },
+  titleRow: { flexDirection: 'row', alignItems: 'center'},
+  optionRow: { flexDirection: 'row', alignItems: 'center'},
+  bullet: { flexDirection: 'row', alignItems: 'flex-start'},
   full: { flex: 1, paddingHorizontal: spacing.l },
   fullContent: { gap: spacing.l, alignItems: 'stretch' },
   hazard: {
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   risks: { padding: spacing.l, gap: spacing.m },
-  checkRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.m, paddingVertical: spacing.s },
+  checkRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: spacing.s },
   checkbox: { width: 24, height: 24, borderRadius: 6, borderWidth: 2, alignItems: 'center', justifyContent: 'center' },
   actions: { gap: spacing.s, paddingTop: spacing.m },
 });

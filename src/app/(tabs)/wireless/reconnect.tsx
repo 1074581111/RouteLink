@@ -45,5 +45,5 @@ export default function Reconnect() {
 const styles = StyleSheet.create({
   flex: { flex: 1 },
   steps: { gap: spacing.m },
-  step: { flexDirection: 'row', gap: spacing.m, alignItems: 'flex-start' },
+  step: { flexDirection: 'row', alignItems: 'flex-start' },
 });

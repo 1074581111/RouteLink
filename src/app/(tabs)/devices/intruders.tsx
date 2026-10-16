@@ -452,20 +452,19 @@ function IntruderListRow({ row, picked, onPress }: { row: IntruderRow; picked?: 
 
 const styles = StyleSheet.create({
   card: { gap: spacing.m },
-  buttons: { flexDirection: 'row', gap: spacing.s },
+  buttons: { flexDirection: 'row'},
   button: { flex: 1 },
-  summary: { flexDirection: 'row', alignItems: 'center', gap: spacing.m },
+  summary: { flexDirection: 'row', alignItems: 'center'},
   summaryText: { flex: 1, gap: 2 },
   notes: { gap: spacing.s, marginHorizontal: spacing.l },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.m,
     paddingHorizontal: spacing.l,
     paddingVertical: spacing.m,
   },
   icon: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
   check: { width: 24, height: 24, borderRadius: 12, borderWidth: 1.5, alignItems: 'center', justifyContent: 'center' },
   texts: { flex: 1, gap: 3 },
-  tags: { flexDirection: 'row', flexWrap: 'wrap', gap: 4 },
+  tags: { flexDirection: 'row', flexWrap: 'wrap'},
 });

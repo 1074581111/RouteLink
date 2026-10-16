@@ -131,7 +131,7 @@ export function SpeedFigures({
 
 const styles = StyleSheet.create({
   meter: { gap: spacing.s, paddingVertical: spacing.s },
-  big: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'center', gap: spacing.xs },
+  big: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'center'},
   number: { fontVariant: ['tabular-nums'] },
   track: { height: 6, borderRadius: 3, overflow: 'hidden' },
   bar: { height: 6, borderRadius: 3 },

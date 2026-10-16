@@ -158,6 +158,6 @@ export default function ParentalSchedule() {
 const styles = StyleSheet.create({
   loading: { gap: spacing.s },
   head: { gap: spacing.s },
-  status: { flexDirection: 'row', alignItems: 'center', gap: spacing.s, marginTop: spacing.xs },
+  status: { flexDirection: 'row', alignItems: 'center', marginTop: spacing.xs },
   flex: { flex: 1 },
 });

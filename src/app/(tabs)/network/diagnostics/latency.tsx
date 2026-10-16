@@ -327,7 +327,7 @@ function Stat({ label, value, color }: { label: string; value?: string; color?: 
 }
 
 const styles = StyleSheet.create({
-  stats: { flexDirection: 'row', gap: spacing.s },
+  stats: { flexDirection: 'row'},
   stat: { flex: 1, gap: 2 },
   note: { marginHorizontal: spacing.l },
   loading: { padding: spacing.m },

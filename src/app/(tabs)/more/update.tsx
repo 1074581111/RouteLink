@@ -280,7 +280,7 @@ function ApkActions({ apk, htmlUrl, mirror }: { apk: Apk; htmlUrl: string; mirro
 
 const styles = StyleSheet.create({
   card: { gap: spacing.m },
-  row: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  row: { flexDirection: 'row', alignItems: 'center'},
   flex: { flex: 1 },
   mirror: { padding: spacing.m },
   track: { height: 6, borderRadius: 3, overflow: 'hidden' },

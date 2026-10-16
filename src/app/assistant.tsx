@@ -465,7 +465,6 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.s,
     paddingHorizontal: spacing.m,
     paddingBottom: spacing.s,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -478,7 +477,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     alignSelf: 'center',
-    gap: 6,
     paddingHorizontal: spacing.m,
     paddingVertical: 6,
     borderRadius: 999,
@@ -488,7 +486,6 @@ const styles = StyleSheet.create({
   routerPill: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 5,
     paddingHorizontal: spacing.m,
     paddingVertical: 5,
     borderRadius: 999,

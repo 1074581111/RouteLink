@@ -326,7 +326,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: spacing.l,
   },
-  side: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  side: { flexDirection: 'row', alignItems: 'center'},
   measure: { position: 'absolute', opacity: 0 },
   compactTitle: { position: 'absolute', top: 0, bottom: 0, justifyContent: 'center' },
   back: { width: 40, height: 40, alignItems: 'center', justifyContent: 'center' },

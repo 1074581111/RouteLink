@@ -456,5 +456,5 @@ const styles = StyleSheet.create({
   note: { marginHorizontal: spacing.l },
   card: { gap: spacing.l },
   side: { gap: spacing.s },
-  links: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.s },
+  links: { flexDirection: 'row', flexWrap: 'wrap'},
 });

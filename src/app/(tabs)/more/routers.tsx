@@ -131,8 +131,8 @@ function MoveButton({
 }
 
 const styles = StyleSheet.create({
-  badges: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
-  moves: { flexDirection: 'row', gap: spacing.s },
+  badges: { flexDirection: 'row', alignItems: 'center'},
+  moves: { flexDirection: 'row'},
   move: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
   disabled: { opacity: 0.3 },
 });

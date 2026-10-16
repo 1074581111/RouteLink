@@ -218,7 +218,7 @@ function SqmForm({ state }: { state: SqmState }) {
 const styles = StyleSheet.create({
   loading: { gap: spacing.s },
   note: { paddingHorizontal: spacing.l },
-  status: { flexDirection: 'row', alignItems: 'center', gap: spacing.m },
+  status: { flexDirection: 'row', alignItems: 'center'},
   flex: { flex: 1 },
   form: { gap: spacing.m },
 });
