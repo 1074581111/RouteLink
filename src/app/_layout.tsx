@@ -25,6 +25,11 @@ export { RouteErrorBoundary as ErrorBoundary } from '@/ui/RouteErrorBoundary';
 SplashScreen.preventAutoHideAsync().catch(() => {});
 initI18n('system');
 
+// iOS 26+ has Liquid Glass: transparent sheet content lets the glass effect show through.
+// On earlier iOS there is no glass effect — transparent content overlaps with the view behind.
+const IOS_MAJOR = Platform.OS === 'ios' ? parseInt(String(Platform.Version).split('.')[0], 10) : 0;
+const IS_LIQUID_GLASS = IOS_MAJOR >= 26;
+
 export default function RootLayout() {
   const [queryClient] = useState(createQueryClient);
   const settingsReady = useSettings((s) => s.hydrated);
@@ -82,7 +87,9 @@ const sheetOptions = (detents: number[]) =>
         presentation: 'formSheet' as const,
         sheetAllowedDetents: detents,
         sheetGrabberVisible: true,
-        contentStyle: styles.transparent,
+        // Transparent only for Liquid Glass (iOS 26+). Earlier iOS gets the default
+        // opaque sheet background to avoid content overlapping the presenting view.
+        ...(IS_LIQUID_GLASS ? { contentStyle: styles.transparent } : null),
       }
     : { presentation: 'transparentModal' as const, animation: 'none' as const, contentStyle: styles.transparent };
 
