@@ -1,4 +1,5 @@
 import { Stack } from 'expo-router';
+import { isLiquidGlassAvailable } from 'expo-glass-effect';
 import type { ComponentProps } from 'react';
 import { Platform } from 'react-native';
 
@@ -6,9 +7,15 @@ import { useTheme } from '@/ui/theme/ThemeProvider';
 
 type StackOptions = NonNullable<ComponentProps<typeof Stack>['screenOptions']>;
 
+// Liquid Glass (iOS 26+) renders its edge effect over a transparent header. On earlier iOS
+// there is no such effect: a transparent header lets scrolled content show through and
+// overlap the title, so fall back to the standard bar background there.
+const LIQUID_GLASS = isLiquidGlassAvailable();
+
 /**
- * A stack inside a tab or a modal. iOS: native large-title header, transparent so iOS 26 renders its glass edge
- * effect. Android: no native header — Screen draws an iOS 26–style bar. Titles and header items are
+ * A stack inside a tab or a modal. iOS: native large-title header, transparent on iOS 26 so
+ * the system renders its glass edge effect, standard bar background on earlier iOS.
+ * Android: no native header — Screen draws an iOS 26–style bar. Titles and header items are
  * set by each screen through <Screen title headerLeft headerRight>.
  */
 export function AppStack() {
@@ -20,7 +27,7 @@ export function AppStack() {
           // and white cards would disappear on it in light mode.
           contentStyle: { backgroundColor: colors.background },
           headerLargeTitle: true,
-          headerTransparent: true,
+          headerTransparent: LIQUID_GLASS,
           headerShadowVisible: false,
           headerLargeTitleShadowVisible: false,
           headerTintColor: colors.accent,
