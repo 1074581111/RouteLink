@@ -220,7 +220,6 @@ const styles = StyleSheet.create({
   power: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.s,
     paddingHorizontal: spacing.m,
     paddingVertical: spacing.s,
     borderRadius: 999,

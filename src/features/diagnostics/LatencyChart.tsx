@@ -237,8 +237,8 @@ const styles = StyleSheet.create({
   readout: { minHeight: 18, marginBottom: 4 },
   axisMax: { position: 'absolute', right: 0, top: 2 },
   tick: { position: 'absolute', width: 48, textAlign: 'center' },
-  legend: { flexDirection: 'row', gap: spacing.l, marginTop: spacing.s },
-  legendItem: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  legend: { flexDirection: 'row', marginTop: spacing.s },
+  legendItem: { flexDirection: 'row', alignItems: 'center'},
   legendLine: { width: 14, height: 2, borderRadius: 1 },
   legendBar: { width: 6, height: 10, borderRadius: 1 },
 });

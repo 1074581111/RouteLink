@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   h3: { fontSize: 16, lineHeight: 24, letterSpacing: 0 },
   code: { fontFamily: MONO_FONT, fontSize: 14 },
   list: { gap: spacing.xs },
-  item: { flexDirection: 'row', gap: spacing.s },
+  item: { flexDirection: 'row'},
   marker: { minWidth: 16 },
   flex: { flex: 1 },
   quote: { borderLeftWidth: 3, paddingLeft: spacing.m },

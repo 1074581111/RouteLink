@@ -291,7 +291,6 @@ const styles = StyleSheet.create({
   search: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.s,
     marginHorizontal: spacing.l,
     marginTop: spacing.s,
     paddingHorizontal: spacing.m,
@@ -302,7 +301,6 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.m,
     minHeight: 44,
     paddingHorizontal: spacing.m,
     marginHorizontal: spacing.s,

@@ -43,5 +43,5 @@ export function DeviceRow({ client }: { client: Client }) {
 
 const styles = StyleSheet.create({
   icon: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
-  right: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  right: { flexDirection: 'row', alignItems: 'center'},
 });
