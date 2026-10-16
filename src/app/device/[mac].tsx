@@ -372,7 +372,6 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.l,
     marginTop: spacing.s,
   },
   avatar: {
@@ -381,8 +380,10 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
+    marginRight: spacing.l,
+    flexShrink: 0,
   },
-  headerText: { flex: 1, gap: 4 },
+  headerText: { flex: 1, flexShrink: 1 },
   statusRow: {
     flexDirection: 'row',
     alignItems: 'center',
