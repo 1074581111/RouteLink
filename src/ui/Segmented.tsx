@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
   option: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.s,
     minHeight: 44,
     paddingHorizontal: spacing.m,
     paddingVertical: spacing.s,

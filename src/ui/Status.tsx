@@ -64,5 +64,5 @@ export function SignalBars({ dbm, size = 14 }: { dbm: number; size?: number }) {
 
 const styles = StyleSheet.create({
   badge: { borderWidth: 1, borderRadius: 6, paddingHorizontal: 6, paddingVertical: 1 },
-  bars: { flexDirection: 'row', alignItems: 'flex-end', gap: 1.5 },
+  bars: { flexDirection: 'row', alignItems: 'flex-end'},
 });

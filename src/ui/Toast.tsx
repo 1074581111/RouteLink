@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
   toast: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.s,
     paddingHorizontal: spacing.l,
     paddingVertical: spacing.m,
   },

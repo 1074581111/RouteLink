@@ -71,7 +71,7 @@ export function TimeField({
 }
 
 const styles = StyleSheet.create({
-  row: { flexDirection: 'row', alignItems: 'center', minHeight: 44, gap: spacing.m },
+  row: { flexDirection: 'row', alignItems: 'center', minHeight: 44},
   button: { borderRadius: 10, paddingHorizontal: spacing.s },
   label: { flex: 1 },
 });
