@@ -176,6 +176,6 @@ const styles = StyleSheet.create({
   intro: { marginHorizontal: spacing.xs },
   // A stand-in for the wallpaper: the widgets' own background shows against it.
   preview: { alignItems: 'center', padding: spacing.m, borderRadius: 18, marginVertical: spacing.s },
-  footer: { flexDirection: 'row', alignItems: 'center', gap: spacing.m },
+  footer: { flexDirection: 'row', alignItems: 'center'},
   count: { flex: 1 },
 });

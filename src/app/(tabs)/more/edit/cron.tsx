@@ -227,5 +227,5 @@ function CronForm({
 
 const styles = StyleSheet.create({
   card: { gap: spacing.m },
-  presets: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.s },
+  presets: { flexDirection: 'row', flexWrap: 'wrap'},
 });

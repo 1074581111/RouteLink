@@ -192,16 +192,15 @@ function SegmentRow({
 
 const styles = StyleSheet.create({
   head: { gap: spacing.m },
-  headRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.m },
+  headRow: { flexDirection: 'row', alignItems: 'center'},
   flex: { flex: 1, gap: 2 },
   track: { height: 4, borderRadius: 2, overflow: 'hidden' },
   bar: { height: 4, borderRadius: 2 },
   segment: { paddingHorizontal: spacing.l, paddingVertical: spacing.m, gap: spacing.s },
-  segmentHead: { flexDirection: 'row', alignItems: 'flex-start', gap: spacing.m },
+  segmentHead: { flexDirection: 'row', alignItems: 'flex-start'},
   advice: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.s,
     marginLeft: 26 + spacing.m,
     paddingHorizontal: spacing.m,
     paddingVertical: spacing.s,

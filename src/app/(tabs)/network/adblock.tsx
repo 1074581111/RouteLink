@@ -215,6 +215,6 @@ function StatusCard({ state }: { state: AdblockState }) {
 const styles = StyleSheet.create({
   loading: { gap: spacing.s },
   card: { gap: spacing.s },
-  row: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  row: { flexDirection: 'row', alignItems: 'center'},
   flex: { flex: 1 },
 });
