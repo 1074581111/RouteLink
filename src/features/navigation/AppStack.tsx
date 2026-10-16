@@ -1,5 +1,6 @@
 import { Stack } from 'expo-router';
-import { isLiquidGlassAvailable } from 'expo-glass-effect';
+// isLiquidGlassAvailable() from expo-glass-effect misreports on some iOS 18 devices,
+// so use an explicit OS version check instead.
 import type { ComponentProps } from 'react';
 import { Platform } from 'react-native';
 
@@ -10,7 +11,9 @@ type StackOptions = NonNullable<ComponentProps<typeof Stack>['screenOptions']>;
 // Liquid Glass (iOS 26+) renders its edge effect over a transparent header. On earlier iOS
 // there is no such effect: a transparent header lets scrolled content show through and
 // overlap the title, so fall back to the standard bar background there.
-const LIQUID_GLASS = isLiquidGlassAvailable();
+// NOTE: explicit version check — isLiquidGlassAvailable() misreports true on iOS 18.
+const IOS_MAJOR = Platform.OS === 'ios' ? parseInt(String(Platform.Version).split('.')[0], 10) : 0;
+const LIQUID_GLASS = IOS_MAJOR >= 26;
 
 /**
  * A stack inside a tab or a modal. iOS: native large-title header, transparent on iOS 26 so
