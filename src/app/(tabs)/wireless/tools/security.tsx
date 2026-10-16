@@ -419,9 +419,9 @@ function FixForm({
 
 const styles = StyleSheet.create({
   loading: { gap: spacing.m },
-  summary: { flexDirection: 'row', alignItems: 'center', gap: spacing.m },
+  summary: { flexDirection: 'row', alignItems: 'center'},
   card: { gap: spacing.s },
   findings: { gap: spacing.xs },
-  finding: { flexDirection: 'row', alignItems: 'flex-start', gap: spacing.s },
+  finding: { flexDirection: 'row', alignItems: 'flex-start'},
   flex: { flex: 1 },
 });

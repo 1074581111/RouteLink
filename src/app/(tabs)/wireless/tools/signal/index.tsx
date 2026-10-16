@@ -122,5 +122,5 @@ const styles = StyleSheet.create({
   summary: { marginLeft: spacing.l },
   loading: { gap: spacing.s },
   left: { width: 28, alignItems: 'center', gap: 2 },
-  right: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  right: { flexDirection: 'row', alignItems: 'center'},
 });

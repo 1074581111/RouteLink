@@ -181,8 +181,8 @@ function Content({
 
 const styles = StyleSheet.create({
   card: { gap: spacing.m },
-  header: { flexDirection: 'row', alignItems: 'center', gap: spacing.m },
+  header: { flexDirection: 'row', alignItems: 'center'},
   avatar: { width: 52, height: 52, borderRadius: 26, alignItems: 'center', justifyContent: 'center' },
   headerText: { flex: 1, gap: 2 },
-  statusRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  statusRow: { flexDirection: 'row', alignItems: 'center'},
 });

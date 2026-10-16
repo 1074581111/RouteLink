@@ -429,5 +429,5 @@ function EntryStatusLine({ status }: { status: EntryStatus }) {
 const styles = StyleSheet.create({
   flex: { flex: 1 },
   same: { gap: spacing.s },
-  status: { flexDirection: 'row', alignItems: 'center', gap: spacing.s },
+  status: { flexDirection: 'row', alignItems: 'center'},
 });

@@ -347,9 +347,9 @@ function Total({ label, value, color }: { label: string; value?: string; color: 
 
 const styles = StyleSheet.create({
   card: { gap: spacing.m },
-  totals: { flexDirection: 'row', justifyContent: 'space-between', gap: spacing.s },
+  totals: { flexDirection: 'row', justifyContent: 'space-between'},
   total: { flex: 1, gap: 2 },
-  totalLabel: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  totalLabel: { flexDirection: 'row', alignItems: 'center'},
   filters: { gap: spacing.s },
   loading: { gap: spacing.s },
 });

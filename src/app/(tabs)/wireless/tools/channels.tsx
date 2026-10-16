@@ -444,7 +444,7 @@ const styles = StyleSheet.create({
   summary: { marginLeft: spacing.l },
   advice: { gap: spacing.s },
   badges: { flexDirection: 'row' },
-  legend: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.m, marginHorizontal: spacing.l },
-  legendItem: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  legend: { flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: spacing.l },
+  legendItem: { flexDirection: 'row', alignItems: 'center'},
   swatch: { width: 14, height: 10, borderRadius: 3 },
 });
