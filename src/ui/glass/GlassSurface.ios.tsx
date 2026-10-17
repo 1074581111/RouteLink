@@ -1,60 +1,46 @@
-import { BlurView } from 'expo-blur';
-import { GlassView, isLiquidGlassAvailable } from 'expo-glass-effect';
 import { StyleSheet, View } from 'react-native';
 
 import { useTheme } from '../theme/ThemeProvider';
 import { defaultRadius, type GlassSurfaceProps } from './types';
 
-const LIQUID_GLASS = isLiquidGlassAvailable();
-
 /**
- * Cards are plain grouped cells (iOS 26 keeps content solid). Floating chrome — capsules, toasts,
- * custom bars — is native Liquid Glass on iOS 26, system material blur before it, and opaque when
- * Reduce Transparency is on.
+ * iOS 18 redesign: SOLID surfaces only. No Liquid Glass, no blur, no transparency.
+ * The expo-glass-effect import is removed entirely.
+ * Props API unchanged for compatibility.
  */
-export function GlassSurface({
-  variant = 'card',
-  interactive,
-  tint,
-  radius,
-  style,
-  children,
-  ...rest
-}: GlassSurfaceProps) {
-  const { scheme, colors, reduceTransparency } = useTheme();
-  const shape = { borderRadius: radius ?? defaultRadius(variant), overflow: 'hidden' as const };
+export function GlassSurface({ variant = 'card', radius, style, children, ...rest }: GlassSurfaceProps) {
+  const { colors } = useTheme();
+  const borderRadius = radius ?? defaultRadius(variant);
 
-  if (variant === 'card' || reduceTransparency) {
-    return (
-      <View style={[shape, { backgroundColor: colors.card }, style]} {...rest}>
-        {tint ? (
-          <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: tint, opacity: 0.14 }]} />
-        ) : null}
-        {children}
-      </View>
-    );
-  }
-  if (LIQUID_GLASS) {
-    // Never animate opacity on GlassView or a parent: the effect stops rendering at 0 (expo-glass-effect known issue).
-    return (
-      <GlassView
-        glassEffectStyle="regular"
-        isInteractive={interactive}
-        tintColor={tint}
-        colorScheme={scheme}
-        style={[{ borderRadius: shape.borderRadius }, style]}
-        {...rest}>
-        {children}
-      </GlassView>
-    );
-  }
+  const isFloating = variant === 'floating' || variant === 'pill';
+
   return (
-    <BlurView
-      intensity={70}
-      tint={scheme === 'dark' ? 'systemMaterialDark' : 'systemMaterialLight'}
-      style={[shape, style]}
+    <View
+      style={[
+        styles.base,
+        isFloating && styles.floating,
+        {
+          borderRadius,
+          backgroundColor: colors.card,
+          borderColor: colors.separator,
+        },
+        style,
+      ]}
       {...rest}>
       {children}
-    </BlurView>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  base: {
+    overflow: 'hidden',
+    borderWidth: StyleSheet.hairlineWidth,
+  },
+  floating: {
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    shadowColor: '#000000',
+  },
+});

@@ -117,6 +117,7 @@ function NativeHeaderScreen({
       ) : null}
       <ScrollView
         ref={scrollRef}
+        style={{ backgroundColor: colors.background }}
         onContentSizeChange={onContentSizeChange}
         onScrollBeginDrag={onScrollBeginDrag}
         contentInsetAdjustmentBehavior="automatic"
@@ -316,7 +317,7 @@ export function BackButton({ onPress }: { onPress: () => void }) {
 
 const styles = StyleSheet.create({
   flex: { flex: 1 },
-  content: { padding: spacing.l, gap: spacing.l },
+  content: { padding: spacing.l },
   largeTitle: { transformOrigin: 'left center', marginBottom: -spacing.s },
   bar: { position: 'absolute', top: 0, left: 0, right: 0 },
   barRow: {

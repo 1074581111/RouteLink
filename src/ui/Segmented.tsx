@@ -67,7 +67,7 @@ function RadioList({ values = [], selectedIndex, onChange, enabled = true, style
 }
 
 const styles = StyleSheet.create({
-  list: { borderRadius: 16, padding: 3, gap: 2 },
+  list: { borderRadius: 16, padding: 3},
   option: {
     flexDirection: 'row',
     alignItems: 'center',

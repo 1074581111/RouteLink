@@ -25,10 +25,7 @@ export { RouteErrorBoundary as ErrorBoundary } from '@/ui/RouteErrorBoundary';
 SplashScreen.preventAutoHideAsync().catch(() => {});
 initI18n('system');
 
-// iOS 26+ has Liquid Glass: transparent sheet content lets the glass effect show through.
-// On earlier iOS there is no glass effect — transparent content overlaps with the view behind.
-const IOS_MAJOR = Platform.OS === 'ios' ? parseInt(String(Platform.Version).split('.')[0], 10) : 0;
-const IS_LIQUID_GLASS = IOS_MAJOR >= 26;
+// iOS 18 redesign: sheets ALWAYS use opaque background. No transparency.
 
 export default function RootLayout() {
   const [queryClient] = useState(createQueryClient);
@@ -78,8 +75,8 @@ export default function RootLayout() {
 }
 
 /**
- * Sheets: iOS gets the system form sheet (Liquid Glass on iOS 26). Android gets a transparent modal
- * in which SheetScreen draws an iOS 26–style floating sheet.
+ * iOS 18 redesign: Sheets use the system form sheet with DEFAULT opaque background.
+ * No transparency. Android gets a transparent modal with a custom-drawn sheet.
  */
 const sheetOptions = (detents: number[]) =>
   Platform.OS === 'ios'
@@ -89,7 +86,7 @@ const sheetOptions = (detents: number[]) =>
         sheetGrabberVisible: true,
         // Transparent only for Liquid Glass (iOS 26+). Earlier iOS gets the default
         // opaque sheet background to avoid content overlapping the presenting view.
-        ...(IS_LIQUID_GLASS ? { contentStyle: styles.transparent } : null),
+        // No contentStyle: iOS uses default opaque sheet background
       }
     : { presentation: 'transparentModal' as const, animation: 'none' as const, contentStyle: styles.transparent };
 

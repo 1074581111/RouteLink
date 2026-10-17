@@ -266,8 +266,8 @@ function HourStepper({ label, value, onChange }: { label: string; value: number;
 }
 
 const styles = StyleSheet.create({
-  wrap: { gap: spacing.s },
-  chips: { gap: spacing.s, paddingHorizontal: 2 },
+  wrap: {},
+  chips: { paddingHorizontal: 2 },
   chip: {
     paddingHorizontal: spacing.m,
     paddingVertical: 7,
@@ -279,12 +279,12 @@ const styles = StyleSheet.create({
   labelText: { flex: 1 },
   scrim: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(0,0,0,0.35)' },
   sheetWrap: { position: 'absolute', left: spacing.m, right: spacing.m, bottom: 0 },
-  sheet: { padding: spacing.l, gap: spacing.m },
+  sheet: { padding: spacing.l},
   row: { flexDirection: 'row', alignItems: 'center', minHeight: 44},
   rowButton: { borderRadius: 12, paddingHorizontal: spacing.s },
   rowLabel: { flex: 1 },
   hours: { flexDirection: 'row', justifyContent: 'space-around' },
-  stepper: { alignItems: 'center', gap: 4 },
+  stepper: { alignItems: 'center'},
   stepperRow: { flexDirection: 'row', alignItems: 'center'},
   step: { width: 34, height: 34, borderRadius: 17, alignItems: 'center', justifyContent: 'center' },
   hour: { minWidth: 64, textAlign: 'center', fontVariant: ['tabular-nums'] },

@@ -1,86 +1,49 @@
-import { BlurView } from 'expo-blur';
-import { Platform, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { useTheme } from '../theme/ThemeProvider';
-import { useBlurTarget } from './BlurTarget';
 import { defaultRadius, type GlassSurfaceProps } from './types';
 
-const CAN_BLUR = Platform.OS === 'android' && Number(Platform.Version) >= 31;
-
 /**
- * Android (and fallback). Cards are plain grouped cells, as in iOS 26 Settings. Floating chrome —
- * capsules, the tab bar, sheets — imitates Liquid Glass: a light translucent fill with a soft
- * shadow, plus a real background blur on Android 12+ where a blur target exists.
+ * iOS 18 redesign: SOLID surfaces only. No blur, no transparency, no glass effects.
+ * All variants render as opaque views with theme colors.
+ * Props API unchanged for compatibility.
  */
-export function GlassSurface({ variant = 'card', tint, radius, style, children, ...rest }: GlassSurfaceProps) {
-  const { scheme, colors, reduceTransparency } = useTheme();
-  const target = useBlurTarget();
+export function GlassSurface({ variant = 'card', radius, style, children, ...rest }: GlassSurfaceProps) {
+  const { colors } = useTheme();
   const borderRadius = radius ?? defaultRadius(variant);
-  const tintLayer = tint ? (
-    <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: tint, opacity: 0.14 }]} />
-  ) : null;
 
-  if (variant === 'card') {
-    return (
-      <View style={[styles.card, { borderRadius, backgroundColor: colors.card }, style]} {...rest}>
-        {tintLayer}
-        {children}
-      </View>
-    );
-  }
+  // All variants use solid card background. The 'floating'/'pill' distinction
+  // is preserved via shadow/elevation only (no transparency).
+  const isFloating = variant === 'floating' || variant === 'pill';
 
-  const blur = variant === 'floating' && CAN_BLUR && !reduceTransparency && !!target;
   return (
     <View
       style={[
-        styles.glass,
-        variant === 'floating' ? styles.floating : styles.pill,
+        styles.base,
+        isFloating && styles.floating,
         {
           borderRadius,
-          borderColor: colors.glassBorder,
-          // Without a blur to soften what is behind, a sheet must be opaque to stay legible.
-          backgroundColor:
-            reduceTransparency || (variant === 'floating' && !blur)
-              ? colors.card
-              : blur
-                ? 'transparent'
-                : colors.glassFillStrong,
-          shadowColor: colors.shadow,
+          backgroundColor: colors.card,
+          borderColor: colors.separator,
         },
         style,
       ]}
       {...rest}>
-      {blur ? (
-        <>
-          <BlurView
-            blurTarget={target}
-            blurMethod="dimezisBlurView"
-            intensity={45}
-            tint={scheme}
-            style={StyleSheet.absoluteFill}
-          />
-          <View style={[StyleSheet.absoluteFill, { backgroundColor: colors.glassFill }]} />
-        </>
-      ) : null}
-      {tintLayer}
       {children}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  card: { overflow: 'hidden' },
-  glass: { overflow: 'hidden', borderWidth: StyleSheet.hairlineWidth },
-  pill: {
-    elevation: 2,
-    shadowOpacity: 0.12,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: 2 },
+  base: {
+    overflow: 'hidden',
+    borderWidth: StyleSheet.hairlineWidth,
   },
   floating: {
-    elevation: 10,
-    shadowOpacity: 0.2,
-    shadowRadius: 20,
-    shadowOffset: { width: 0, height: 8 },
+    elevation: 4,
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    shadowColor: '#000000',
   },
 });

@@ -53,6 +53,6 @@ export function RingGauge({
 }
 
 const styles = StyleSheet.create({
-  wrap: { alignItems: 'center', gap: 6 },
+  wrap: { alignItems: 'center'},
   center: { alignItems: 'center', justifyContent: 'center' },
 });

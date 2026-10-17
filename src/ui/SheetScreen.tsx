@@ -15,7 +15,13 @@ const SPRING = { damping: 22, stiffness: 220, mass: 0.9 } as const;
  * large corner radius, grabber, dimmed backdrop, drag down or tap outside to dismiss.
  */
 export function SheetScreen({ children, detent = 0.68 }: { children: ReactNode; detent?: number }) {
-  if (Platform.OS === 'ios') return <ElevatedTheme>{children}</ElevatedTheme>;
+  const { colors } = useTheme();
+  if (Platform.OS === 'ios')
+    return (
+      <View style={{ flex: 1, backgroundColor: colors.sheet }}>
+        <ElevatedTheme>{children}</ElevatedTheme>
+      </View>
+    );
   return <AndroidSheet detent={detent}>{children}</AndroidSheet>;
 }
 
