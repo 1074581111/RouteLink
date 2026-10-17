@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.m,
   },
   icon: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
-  body: { flex: 1, gap: 3 },
+  body: { flex: 1},
   line: { flexDirection: 'row', alignItems: 'baseline'},
   name: { flex: 1 },
   track: { height: 4, borderRadius: 2, overflow: 'hidden', marginTop: 2 },
