@@ -42,7 +42,7 @@ export function GlassCard({ title, subtitle, icon, accessory, children, style, c
 }
 
 const styles = StyleSheet.create({
-  card: { padding: spacing.l, gap: spacing.m },
+  card: { padding: spacing.l },
   header: { flexDirection: 'row', alignItems: 'center'},
   headerText: { flex: 1 },
 });
