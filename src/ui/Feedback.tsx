@@ -104,7 +104,7 @@ export function Banner({
 }
 
 const styles = StyleSheet.create({
-  empty: { alignItems: 'center', justifyContent: 'center', gap: spacing.m, padding: spacing.xxl },
+  empty: { alignItems: 'center', justifyContent: 'center', padding: spacing.xxl },
   banner: {
     flexDirection: 'row',
     alignItems: 'center',
