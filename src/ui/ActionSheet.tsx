@@ -94,9 +94,9 @@ export function ActionSheet({
 
 const styles = StyleSheet.create({
   scrim: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(0,0,0,0.35)' },
-  wrap: { position: 'absolute', left: spacing.m, right: spacing.m, bottom: 0, gap: spacing.s },
+  wrap: { position: 'absolute', left: spacing.m, right: spacing.m, bottom: 0},
   group: { overflow: 'hidden' },
-  header: { paddingHorizontal: spacing.l, paddingVertical: spacing.m, gap: 2 },
+  header: { paddingHorizontal: spacing.l, paddingVertical: spacing.m},
   divider: { height: StyleSheet.hairlineWidth },
   action: {
     minHeight: 56,
