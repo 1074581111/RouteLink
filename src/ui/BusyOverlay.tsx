@@ -33,5 +33,5 @@ export function BusyOverlay({ visible, title, hint }: { visible: boolean; title:
 
 const styles = StyleSheet.create({
   scrim: { flex: 1, justifyContent: 'center', padding: spacing.xl, backgroundColor: 'rgba(0,0,0,0.45)' },
-  card: { padding: spacing.xl, gap: spacing.m, alignItems: 'center' },
+  card: { padding: spacing.xl, alignItems: 'center' },
 });
